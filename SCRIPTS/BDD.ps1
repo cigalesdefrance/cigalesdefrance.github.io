@@ -20,8 +20,8 @@ $cigales_codes | ForEach-Object {
 		
 		#INATURALIST
 		"Inaturalist - $nom"
-		if ($faune_france -eq "") {
-		"Pas de données pour l'espèce dans INaturalist" }
+		if ($inaturalist -eq "") {
+		"Pas de données pour l'espèce dans Inaturalist" }
 		else {
 		Add-Content "./INATURALIST/$nom.csv" "Latitude,Longitude"
 		$total_results = (Invoke-WebRequest "https://api.inaturalist.org/v1/observations?&place_id=6753&taxon_id=$inaturalist" | ConvertFrom-Json).total_results
@@ -33,8 +33,8 @@ $cigales_codes | ForEach-Object {
 		
 		#OBSERVATION.ORG
 		"Observation.org - $nom"
-		if ($faune_france -eq "") {
-		"Pas de données pour l'espèce dans Observation.org" }
+		if ($observation -eq "") {
+		"Pas de données pour l'espèce dans Observation" }
 		else {
 		[xml]$data = (invoke-webrequest -Uri "https://france.observation.org/kmlloc/soort_get_xml_points.php?soort=$observation")
 		$observation = $data.markers.line.point
