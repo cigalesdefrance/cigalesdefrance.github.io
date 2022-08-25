@@ -1,0 +1,15 @@
+name: SAUVEGARDE-ONEM
+on:
+  schedule:
+    - cron:  '0 5 * * 1'
+  workflow_dispatch:
+
+jobs:
+  UPDATE-ALL:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Sauvegarde des cartes de l'ONEM
+        run:  |
+          ./SCRIPTS/sauvegarde_onem.ps1
