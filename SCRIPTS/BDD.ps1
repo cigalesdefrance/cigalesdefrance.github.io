@@ -35,7 +35,6 @@ $cigales_codes | ForEach-Object {
 		$observation | Out-File "./OBSERVATION/$nom.csv"
 		Remove-Item "observation.txt"
     }
-}
 
 # git
 git config --local user.email "cigalesdefrance@outlook.fr"

@@ -5,15 +5,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  TELECHARGEMENTS-BDD:
+  TELECHARGEMENT-BDD:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
 
       - name: Téléchargement des bases de données
+        if: always()
         run:  |
           ./SCRIPTS/BDD.ps1
       
       - name: Sauvegarde des cartes de l'ONEM
+        if: always()
         run:  |
           ./SCRIPTS/sauvegarde_onem.ps1
