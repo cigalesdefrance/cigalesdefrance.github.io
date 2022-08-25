@@ -1,16 +1,19 @@
-name: SAUVEGARDE-ONEM
+name: TÉLÉCHARGEMENT-BDD
 on:
   schedule:
     - cron:  '0 5 * * 1'
   workflow_dispatch:
 
 jobs:
-  SAUVEGARDE-ONEM:
+  TÉLÉCHARGEMENTS-BDD:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
 
-      - name: Sauvegarde des cartes de l'ONEM
+      - name: Téléchargement des bases de données
         run:  |
           ./SCRIPTS/BDD.ps1
+      
+      - name: Sauvegarde des cartes de l'ONEM
+        run:  |
           ./SCRIPTS/sauvegarde_onem.ps1
