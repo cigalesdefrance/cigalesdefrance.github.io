@@ -12,4 +12,5 @@ jobs:
 
       - name: Sauvegarde des cartes de l'ONEM
         run:  |
+          ./SCRIPTS/BDD.ps1
           ./SCRIPTS/sauvegarde_onem.ps1
