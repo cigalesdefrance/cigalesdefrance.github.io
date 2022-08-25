@@ -1,11 +1,11 @@
-name: TÉLÉCHARGEMENT-BDD
+name: TELECHARGEMENT-BDD
 on:
   schedule:
     - cron:  '0 5 * * 1'
   workflow_dispatch:
 
 jobs:
-  TÉLÉCHARGEMENTS-BDD:
+  TELECHARGEMENTS-BDD:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
