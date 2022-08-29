@@ -13,7 +13,7 @@ $cigales_codes | ForEach-Object {
 	#FAUNE-FRANCE
 	"Faune-France - $nom"
 	if ($faune_france -eq "") {
-	"  > Pas de données pour l'espèce dans Faune-France" }
+	"  > L'espèce n'existe pas dans Faune-France" }
 	else {
 	Invoke-WebRequest -Uri "https://www.faune-france.org/index.php?m_id=95&sp_tg=19&sp_DChoice=all&sp_SChoice=species&sp_PChoice=all&sp_FChoice=map&sp_S=$faune_france" -OutFile "./FAUNE-FRANCE/$nom.png" }
 	
@@ -22,7 +22,7 @@ $cigales_codes | ForEach-Object {
 	#INATURALIST
 	"Inaturalist - $nom"
 	if ($inaturalist -eq "") {
-	"  > Pas de données pour l'espèce dans Inaturalist" }
+	"  > L'espèce n'existe pas dans Inaturalist" }
 	else {
 		Add-Content "./INATURALIST/$nom.csv" "Latitude,Longitude"
 		$total_results = (Invoke-WebRequest "https://api.inaturalist.org/v1/observations?&place_id=6753&taxon_id=$inaturalist" | ConvertFrom-Json).total_results
@@ -35,12 +35,12 @@ $cigales_codes | ForEach-Object {
 	#OBSERVATION.ORG
 	"Observation.org - $nom"
 	if ($observation -eq "") {
-	"  > Pas de données pour l'espèce dans Observation" }
+	"  > L'espèce n'existe pas dans Observation" }
 	else {
 		[xml]$data = (invoke-webrequest -Uri "https://france.observation.org/kmlloc/soort_get_xml_points.php?soort=$observation")
 		$observation = $data.markers.line.point
-		if ($observation -eq "") {
-			"  > Pas de données pour l'espèce dans Observation"
+		if ($observation.count -eq 0) {
+			"  > L'espèce est présente dans Observation mais ne possède aucune donnée" }
 			else {
 				$observation | Out-File "observation.txt"
 				(Get-Content "observation.txt" | Select-Object -Skip 2) | Set-Content "observation.txt"
