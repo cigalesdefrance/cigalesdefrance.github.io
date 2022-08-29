@@ -49,7 +49,6 @@ $cigales_codes | ForEach-Object {
 				$observation = $observation -replace " ",","
 				$observation | Out-File "./OBSERVATION/$nom.csv"
 			Remove-Item "observation.txt" }}
-	}
 }
 # git
 git config --local user.email "cigalesdefrance@outlook.fr"
