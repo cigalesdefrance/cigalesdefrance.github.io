@@ -1,1 +1,52 @@
-<h1>Cigales de France</h1>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CARTES - Cigales de France</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- <link rel="icon" type="image/x-icon" href="ASSETS/favicon.ico"> -->
+		<link rel="stylesheet" href="ASSETS/style.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@main/dist/en/latest/legacy/ol.css" type="text/css">
+		<link rel="stylesheet" href="https://ignf.github.io/geoportal-extensions/openlayers-latest/dist/GpPluginOpenLayers.css" />
+		<script src="https://openlayers.org/en/v6.9.0/build/ol.js"></script>
+		<!-- <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@main/dist/en/latest/legacy/ol.js"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/csv2geojson@latest/csv2geojson.js"></script>
+		<script src="https://ignf.github.io/geoportal-extensions/openlayers-latest/dist/GpPluginOpenLayers.js" data-key="calcul,essentiels"></script>
+	</head>
+	<body>
+		<h1 id="title"></h1>
+		<select id="choix">
+			<option espece="Cicadetta_brevipennis">Cigalette des collines</option>
+			<option espece="Cicadetta_brevipennis_litoralis">Cigalette du littoral</option>
+			<option espece="Cicadetta_cantilatrix">Cigalette qui fredonne</option>
+			<option espece="Cicadetta_cerdaniensis">Cigalette pyrénéenne</option>
+			<option espece="Cicadetta_fangoana">Cigalette du Fango</option>
+			<option espece="Cicadetta_montana">Cigalette des montagnes</option>
+			<option espece="Cicadetta_petryi">Cigalette de Petry</option>
+			<option espece="Cicadetta_sibillae">Cigalette de Sibille</option>
+			<option espece="Tettigettalna_argentata">Cigale argentée</option>
+			<option espece="Tettigettula_pygmea">Cigale pygmée</option>
+			<option espece="Cicada_barbara">Cigale mauresque</option>
+			<option espece="Cicada_barbara_lusitanica">Cicada barbara lusitanica</option>
+			<option espece="Cicada_orni">Cigale grise</option>
+			<option espece="Cicadatra_atra">Cigale noire</option>
+			<option espece="Cicadivetta_tibialis">Cigale aux tibias armés</option>
+			<option espece="Dimissalna_dimissa">Cigale des Balkans</option>
+			<option espece="Graptopsaltria_nigrofuscata">Cigale friture</option>
+			<option espece="Lyristes_plebejus">Cigale plébéienne</option>
+			<option espece="Platypleura_kaempferi">Cigale nini</option>
+			<option espece="Tibicina_corsica">Tibicina corsica</option>
+			<option espece="Tibicina_corsica_corsica">Cigale corse</option>
+			<option espece="Tibicina_corsica_fairmairei">Cigale des Cistes</option>
+			<option espece="Tibicina_garricola">Cigale des garrigues</option>
+			<option espece="Tibicina_haematodes">Cigale rouge</option>
+			<option espece="Tibicina_nigronervosa">Cigale à nervures noires</option>
+			<option espece="Tibicina_quadrisignata">Cigale quatre fois signée</option>
+			<option espece="Tibicina_steveni">Cigale orientale</option>
+			<option espece="Tibicina_tomentosa">Cigale cotonneuse</option>
+		</select>
+		<p id="sp"></p>
+		<div id="map" class="map"></div>
+		<script src="ASSETS/index.js"></script>
+	</body>
+</html>

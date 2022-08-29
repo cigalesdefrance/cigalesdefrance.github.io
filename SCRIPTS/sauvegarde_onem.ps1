@@ -11,7 +11,7 @@ foreach($line in Get-Content ./ONEM/index.html) {
 		$Source -match 'tools/cartowiki/CACHE/(.*).jpg'
 		$Sourceurl = $matches[1]
         Echo $sci1
-		Invoke-WebRequest -Uri "http://www.onem-france.org/cigales/tools/cartowiki/CACHE/$Sourceurl.jpg" -OutFile "./ONEM/$sci.jpg"
+		Invoke-WebRequest -Uri "http://www.onem-france.org/cigales/tools/cartowiki/CACHE/$Sourceurl.jpg" -OutFile "./BDD/ONEM/$sci.jpg"
 
     }
 }

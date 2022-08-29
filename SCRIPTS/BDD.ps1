@@ -1,5 +1,5 @@
 $cigales_codes = Import-Csv "CIGALES-CODES.csv"
-Remove-Item "./INATURALIST/*.csv"
+Remove-Item "./BDD/INATURALIST/*.csv"
 $cigales_codes | ForEach-Object {
 	$nom = $_.NOM_SCIENTIFIQUE
 	$onem = $_.ONEM
@@ -15,7 +15,7 @@ $cigales_codes | ForEach-Object {
 	if ($faune_france -eq "") {
 	"  > L'espèce n'existe pas dans Faune-France" }
 	else {
-	Invoke-WebRequest -Uri "https://www.faune-france.org/index.php?m_id=95&sp_tg=19&sp_DChoice=all&sp_SChoice=species&sp_PChoice=all&sp_FChoice=map&sp_S=$faune_france" -OutFile "./FAUNE-FRANCE/$nom.png" }
+	Invoke-WebRequest -Uri "https://www.faune-france.org/index.php?m_id=95&sp_tg=19&sp_DChoice=all&sp_SChoice=species&sp_PChoice=all&sp_FChoice=map&sp_S=$faune_france" -OutFile "./BDD/FAUNE-FRANCE/$nom.png" }
 	
 	#INPN
 	
@@ -24,12 +24,12 @@ $cigales_codes | ForEach-Object {
 	if ($inaturalist -eq "") {
 	"  > L'espèce n'existe pas dans Inaturalist" }
 	else {
-		Add-Content "./INATURALIST/$nom.csv" "Latitude,Longitude"
+		Add-Content "./BDD/INATURALIST/$nom.csv" "Latitude,Longitude"
 		$total_results = (Invoke-WebRequest "https://api.inaturalist.org/v1/observations?&place_id=6753&taxon_id=$inaturalist" | ConvertFrom-Json).total_results
 		$pages = [math]::ceiling($total_results/200)
 		for ($num=1;$num -le $pages;$num++) {
 			"page $num sur $pages"
-		(Invoke-WebRequest "https://api.inaturalist.org/v1/observations?&place_id=6753&taxon_id=$inaturalist&page=$num&per_page=200" | ConvertFrom-Json).results.location | Add-Content "./INATURALIST/$nom.csv" }		
+		(Invoke-WebRequest "https://api.inaturalist.org/v1/observations?&place_id=6753&taxon_id=$inaturalist&page=$num&per_page=200" | ConvertFrom-Json).results.location | Add-Content "./BDD/INATURALIST/$nom.csv" }		
 	}
 	
 	#OBSERVATION.ORG
@@ -47,7 +47,7 @@ $cigales_codes | ForEach-Object {
 				$observation = Get-Content "observation.txt"
 				$observation[0] = "Latitude,Longitude"
 				$observation = $observation -replace " ",","
-				$observation | Out-File "./OBSERVATION/$nom.csv"
+				$observation | Out-File "./BDD/OBSERVATION/$nom.csv"
 			Remove-Item "observation.txt" }}
 }
 # git
