@@ -1,6 +1,6 @@
 $regex = '<a href="([^"]*)">(.[a-z].+)</a>.([a-z].+)<br>'
 
-foreach($line in Get-Content ./ONEM/index.html) {
+foreach($line in Get-Content ./BDD/ONEM/index.html) {
     if($line -match $regex){
 		$url = $matches[1]
 		$sci1 = $matches[2]
