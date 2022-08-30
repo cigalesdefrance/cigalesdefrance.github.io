@@ -8,10 +8,9 @@ window.onload = function go() {
 		sp.innerHTML = this.options[this.selectedIndex].getAttribute('espece');
 		var espece = this.options[this.selectedIndex].getAttribute('espece');
 		
-		
 		// Adresse du CSV
-		var url_bdd1 = './BDD/INATURALIST/' + espece + '.csv';
-		var url_bdd2 = './BDD/OBSERVATION/' + espece + '.csv';
+		var url_bdd1 = './BDD/INATURALIST/' + espece + '.kml';
+		var url_bdd2 = './BDD/OBSERVATION/' + espece + '.kml';
 		
 		// style des couches
 		var style_bdd1 = new ol.style.Style({
@@ -49,20 +48,36 @@ window.onload = function go() {
 		})
 		
 		// Initialize an empty vector layer with a vector source and a GeoJSON format
-		var layer_bdd1 = new ol.layer.Vector({
+		/* var layer_bdd1 = new ol.layer.Vector({
 			source: new ol.source.Vector({
-				format: new ol.format.GeoJSON()
+			format: new ol.format.GeoJSON()
 			}),
 			style: style_bdd1
 			
+		}); */
+		
+		var layer_bdd1 = new ol.layer.Vector({
+			source : new ol.source.Vector({
+				format : new ol.format.KML(),
+				url : url_bdd1
+			}),
+			style: style_bdd1
 		});
 		
-		var layer_bdd2 = new ol.layer.Vector({
+		/* var layer_bdd2 = new ol.layer.Vector({
 			source: new ol.source.Vector({
-				format: new ol.format.GeoJSON()
+			format: new ol.format.GeoJSON()
 			}),
 			style: style_bdd2
 			
+		}); */
+		
+		var layer_bdd2 = new ol.layer.Vector({
+			source : new ol.source.Vector({
+				format : new ol.format.KML(),
+				url : url_bdd2
+			}),
+			style: style_bdd2
 		});
 		
 		// Fonds de carte de base
@@ -119,70 +134,6 @@ window.onload = function go() {
 			})
 		});
 		
-		// Initialize a XMLHttpRequest object to prepare for Ajax request
-		// (we do not try to catch error)
-		var http_bdd1 = new XMLHttpRequest();
-		var http_bdd2 = new XMLHttpRequest();
-		
-		// Assign function to manage when data will be loaded via Ajax
-		http_bdd1.onreadystatechange = function(data) {
-			// If request not complete
-			if (http_bdd1.readyState != 4 || http_bdd1.status != 200) {
-				return;
-				} else {
-				// Response from TSV will be reused to provide to the library
-				// https://github.com/mapbox/csv2geojson the required content
-				// to transform it to GeoJSON
-				csv2geojson.csv2geojson(http_bdd1.responseText, {
-					latfield: 'Latitude',
-					lonfield: 'Longitude',
-					delimiter: ';'
-					}, function(err, data) {
-					// After data reception, add features to the empty vector layer
-					var geoJsonFormat = new ol.format.GeoJSON();
-					var features = geoJsonFormat.readFeatures(
-						data, {
-							featureProjection: 'EPSG:3857'
-						}
-					);
-					layer_bdd1.getSource().addFeatures(features);
-				});
-			}
-		};
-		
-		http_bdd2.onreadystatechange = function(data) {
-			// If request not complete
-			if (http_bdd2.readyState != 4 || http_bdd2.status != 200) {
-				return;
-				} else {
-				// Response from TSV will be reused to provide to the library
-				// https://github.com/mapbox/csv2geojson the required content
-				// to transform it to GeoJSON
-				csv2geojson.csv2geojson(http_bdd2.responseText, {
-					latfield: 'Latitude',
-					lonfield: 'Longitude',
-					delimiter: ';'
-					}, function(err, data) {
-					// After data reception, add features to the empty vector layer
-					var geoJsonFormat = new ol.format.GeoJSON();
-					var features = geoJsonFormat.readFeatures(
-						data, {
-							featureProjection: 'EPSG:3857'
-						}
-					);
-					layer_bdd2.getSource().addFeatures(features);
-				});
-			}
-		};
-		
-		// Set the url for the Ajax call
-		http_bdd1.open('GET', url_bdd1);
-		http_bdd2.open('GET', url_bdd2);
-		// Make the ajax call. It will fire previous onreadystatechange 
-		// after data reception from the file
-		http_bdd1.send();
-		http_bdd2.send();
-		
 		// Création du Layer Switcher
 		var lsControl = new ol.control.LayerSwitcher({
 			// paramétrage de l'affichage de la couche OSM
@@ -236,8 +187,6 @@ window.onload = function go() {
 		// Attribution automatique
 		var attControl = new ol.control.GeoportalAttribution({collapsed: false});
 		map.addControl(attControl);
-		
 	};
 	choix.onchange();
-	
 }
