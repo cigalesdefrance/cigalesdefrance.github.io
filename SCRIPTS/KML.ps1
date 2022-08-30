@@ -3,8 +3,7 @@ $files = Get-ChildItem "./BDD/OBSERVATION/"
 foreach ($f in $files){
 	$fichier = $f.Name
     $espece = $f.Name -replace ".csv"
-	$kml =
-	@"
+	$kml =	@"
 	<?xml version="1.0" encoding="UTF-8"?>
 	<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 	<Document>
@@ -30,8 +29,7 @@ foreach ($f in $files){
 	)
 	</Folder>
 	</Document>
-	</kml>
-	"@
+	</kml>"@
 	
 	$kml | Out-File -Force -Encoding ascii ("./BDD/OBSERVATION/$espece.kml")
 	
@@ -42,8 +40,7 @@ $files = Get-ChildItem "./BDD/INATURALIST/"
 foreach ($f in $files){
 	$fichier = $f.Name
     $espece = $f.Name -replace ".csv"
-	$kml =
-	@"
+	$kml = @"
 	<?xml version="1.0" encoding="UTF-8"?>
 	<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 	<Document>
@@ -69,8 +66,7 @@ foreach ($f in $files){
 	)
 	</Folder>
 	</Document>
-	</kml>
-	"@
+	</kml>"@
 	
 	$kml | Out-File -Force -Encoding ascii ("./BDD/INATURALIST/$espece.kml")
 	
