@@ -13,10 +13,10 @@ jobs:
       - name: Téléchargement des bases de données et construction des kml
         if: always()
         run:  |
-          ./SCRIPTS/BDD.ps1
+          #./SCRIPTS/BDD.ps1
           ./SCRIPTS/KML.ps1
       
       - name: Sauvegarde des cartes de l'ONEM
         if: always()
         run:  |
-          ./SCRIPTS/sauvegarde_onem.ps1
+          #./SCRIPTS/sauvegarde_onem.ps1
