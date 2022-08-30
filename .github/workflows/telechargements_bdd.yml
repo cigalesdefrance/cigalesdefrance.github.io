@@ -10,10 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Téléchargement des bases de données
+      - name: Téléchargement des bases de données et construction des kml
         if: always()
         run:  |
           ./SCRIPTS/BDD.ps1
+          ./SCRIPTS/KML.ps1
       
       - name: Sauvegarde des cartes de l'ONEM
         if: always()
