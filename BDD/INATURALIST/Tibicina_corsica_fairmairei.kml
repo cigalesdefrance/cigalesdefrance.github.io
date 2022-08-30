@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+	<name>Tibicina_corsica_fairmairei</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>2.7477691809,43.0086230277</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>2.5581329226,43.2459575427</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>2.5655732717,42.9751956743</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>2.9537836835,43.1616666176</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>2.9802620318,43.0915869519</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>
