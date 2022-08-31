@@ -1,16 +1,6 @@
 window.onload = function go() {
 	
-	var choix = document.getElementById('choix');
-	var sp = document.getElementById('sp');
 	
-	choix.onchange = function() {
-		title.innerHTML = this.options[this.selectedIndex].text;
-		sp.innerHTML = this.options[this.selectedIndex].getAttribute('espece');
-		var espece = this.options[this.selectedIndex].getAttribute('espece');
-		
-		// Adresse du CSV
-		var url_bdd1 = './BDD/INATURALIST/' + espece + '.kml';
-		var url_bdd2 = './BDD/OBSERVATION/' + espece + '.kml';
 		
 		// style des couches
 		var style_bdd1 = new ol.style.Style({
@@ -47,38 +37,10 @@ window.onload = function go() {
 			})
 		})
 		
-		// Initialize an empty vector layer with a vector source and a GeoJSON format
-		/* var layer_bdd1 = new ol.layer.Vector({
-			source: new ol.source.Vector({
-			format: new ol.format.GeoJSON()
-			}),
-			style: style_bdd1
-			
-		}); */
-		
-		var layer_bdd1 = new ol.layer.Vector({
-			source : new ol.source.Vector({
-				format : new ol.format.KML(),
-				url : url_bdd1
-			}),
-			style: style_bdd1
-		});
-		
-		/* var layer_bdd2 = new ol.layer.Vector({
-			source: new ol.source.Vector({
-			format: new ol.format.GeoJSON()
-			}),
-			style: style_bdd2
-			
-		}); */
-		
-		var layer_bdd2 = new ol.layer.Vector({
-			source : new ol.source.Vector({
-				format : new ol.format.KML(),
-				url : url_bdd2
-			}),
-			style: style_bdd2
-		});
+		var layer_bdd1 = new ol.layer.Vector();
+
+  var layer_bdd2 = new ol.layer.Vector();
+
 		
 		// Fonds de carte de base
 		var regions = new ol.layer.Vector({
@@ -187,6 +149,33 @@ window.onload = function go() {
 		// Attribution automatique
 		var attControl = new ol.control.GeoportalAttribution({collapsed: false});
 		map.addControl(attControl);
-	};
+	
+var choix = document.getElementById('choix');
+	
+	choix.onchange = function() {
+		title.innerHTML = this.options[this.selectedIndex].text;
+		sp.innerHTML = this.options[this.selectedIndex].getAttribute('espece');
+		var espece = this.options[this.selectedIndex].getAttribute('espece');
+		
+		// Adresse du CSV
+		var url_bdd1 = './BDD/INATURALIST/' + espece + '.kml';
+		var url_bdd2 = './BDD/OBSERVATION/' + espece + '.kml';
+
+layer_bdd1.setSource(
+      new ol.source.Vector({
+        format: new ol.format.KML(),
+        url: url_bdd1
+      })
+    );
+
+    layer_bdd2.setSource(
+      new ol.source.Vector({
+        format: new ol.format.KML(),
+        url: url_bdd2
+      })
+    );
+
+
+};
 	choix.onchange();
 }
