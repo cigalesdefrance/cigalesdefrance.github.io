@@ -76,10 +76,15 @@ window.onload = function go() {
 			maxResolution: 200,
 			opacity: 0.3
 		});
+
+var controls = ol.control.defaults({rotate: false}); 
+var interactions = ol.interaction.defaults({altShiftDragRotate:false, pinchRotate:false});
 		
 		
 		// Declare the map with a tile layer, the empty vector layer and set it center
 		var map = new ol.Map({
+controls: controls,
+    interactions: interactions,
 			target: 'map',
 			layers: [
 				layer_osm,
@@ -89,7 +94,6 @@ window.onload = function go() {
 				layer_bdd2,
 				layer_bdd1
 			],
-			target: 'map',
 			view: new ol.View({
 				center: ol.proj.transform([2, 47], 'EPSG:4326', 'EPSG:3857'),
 				zoom: 6
