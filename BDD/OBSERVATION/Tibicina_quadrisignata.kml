@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
-	<Document>
-	<name>Tibicina_quadrisignata</name>
-	<Folder>
-	<name>INATURALIST</name>
-	<Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>3.152,43.720</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>6.109,43.447</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>4.018,44.250</coordinates></Point></Placemark>
-	</Folder>
-	</Document>
-	</kml>
