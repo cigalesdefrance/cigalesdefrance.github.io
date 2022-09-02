@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
-	<Document>
-	<name>Cicadetta_montana</name>
-	<Folder>
-	<name>INATURALIST</name>
-	<Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>1.227954428,43.1097985111</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>5.8499414722,49.5104208562</coordinates></Point></Placemark>
-	</Folder>
-	</Document>
-	</kml>

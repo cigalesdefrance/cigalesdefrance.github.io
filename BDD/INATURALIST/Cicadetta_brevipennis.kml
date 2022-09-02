@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
-	<Document>
-	<name>Cicadetta_brevipennis</name>
-	<Folder>
-	<name>INATURALIST</name>
-	<Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>5.9247222222,43.0722222222</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>4.8809540594,43.6156274469</coordinates></Point></Placemark>
-	</Folder>
-	</Document>
-	</kml>
