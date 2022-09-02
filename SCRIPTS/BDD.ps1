@@ -61,12 +61,13 @@ foreach ($f in $files){
 	$fichier = $f.Name
     $espece = $f.Name -replace ".csv"
 	$kml =
-	"<?xml version=`"1.0`" encoding=`"UTF-8`"?><kml xmlns=`"http://www.opengis.net/kml/2.2`" xmlns:gx=`"http://www.google.com/kml/ext/2.2`" xmlns:kml=`"http://www.opengis.net/kml/2.2`" xmlns:atom=`"http://www.w3.org/2005/Atom`">
+	"<?xml version=`"1.0`" encoding=`"UTF-8`"?><kml xmlns=`"http://www.opengis.net/kml/2.2"`">
 	<Document>
+	<Style id="observation"><IconStyle><scale>0.5</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href></Icon></IconStyle></Style>
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
-	$(Import-Csv "./BDD/OBSERVATION/$fichier" | foreach {'<Placemark><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-square-lv.png</href></Icon></IconStyle><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
+	$(Import-Csv "./BDD/OBSERVATION/$fichier" | foreach {'<Placemark><styleUrl>#observation</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
 	</Folder>
 	</Document>
 	</kml>"
@@ -83,10 +84,11 @@ foreach ($f in $files){
 	$kml =
 	"<?xml version=`"1.0`" encoding=`"UTF-8`"?><kml xmlns=`"http://www.opengis.net/kml/2.2`" xmlns:gx=`"http://www.google.com/kml/ext/2.2`" xmlns:kml=`"http://www.opengis.net/kml/2.2`" xmlns:atom=`"http://www.w3.org/2005/Atom`">
 	<Document>
+	<Style id="inaturalist"><IconStyle><scale>0.5</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href></Icon></IconStyle></Style>
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
-	$(Import-Csv "./BDD/INATURALIST/$fichier" | foreach {'<Placemark><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href></Icon></IconStyle><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
+	$(Import-Csv "./BDD/INATURALIST/$fichier" | foreach {'<Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
 	</Folder>
 	</Document>
 	</kml>"
