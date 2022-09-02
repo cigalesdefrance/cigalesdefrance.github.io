@@ -79,27 +79,35 @@ window.onload = function go() {
 	
 	// Création du Layer Switcher
 	var lsControl = new ol.control.LayerSwitcher({
-		// paramétrage de l'affichage de la couche OSM
 		layers : [
 			{layer: layer_bdd1,
 				config: {
 					title: "Inaturalist",
 					description: "",
-					/* quicklookUrl: "https://" */
 				}
 			},
 			{layer: layer_bdd2,
 				config: {
 					title: "Observation.org",
 					description: ""
-					/* quicklookUrl: "https://" */
+				}
+			},
+			
+			{layer: regions,
+				config: {
+					title: "Régions de France",
+					description: ""
+				}
+				},{layer: departements,
+				config: {
+					title: "Départements de France",
+					description: ""
 				}
 			},
 			{layer: layer_osm,
 				config: {
 					title: "OpenStreetMap",
-					description: "Couche OpenStreet Map",
-					quicklookUrl: "https://openstreetmap.org"
+					description: "Couche OpenStreet Map"
 				}
 			}
 		]
@@ -123,6 +131,7 @@ window.onload = function go() {
 	});
 	map.addControl(mpControl);
 	
+	
 	// Recherche de lieu
 	var searchControl = new ol.control.SearchEngine({});
 	map.addControl(searchControl);
@@ -135,7 +144,7 @@ window.onload = function go() {
 	
 	choix.onchange = function() {
 		title.innerHTML = this.options[this.selectedIndex].text;
-		sp.innerHTML = this.options[this.selectedIndex].getAttribute('espece');
+		//sp.innerHTML = this.options[this.selectedIndex].getAttribute('espece');
 		var espece = this.options[this.selectedIndex].getAttribute('espece');
 		
 		// Adresse du CSV
