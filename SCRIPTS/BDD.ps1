@@ -26,11 +26,14 @@ $cigales_codes | ForEach-Object {
 	else {
 		Add-Content "./BDD/INATURALIST/$nom.csv" "Latitude,Longitude"
 		$total_results = (Invoke-WebRequest "https://api.inaturalist.org/v1/observations?&place_id=6753&taxon_id=$inaturalist" | ConvertFrom-Json).total_results
+	if ($total_results -eq 0) {
+	"  > L'espèce est présente dans Inaturalist mais ne possède aucune donnée" }
+	else {
 		$pages = [math]::ceiling($total_results/200)
 		for ($num=1;$num -le $pages;$num++) {
 			"page $num sur $pages"
 		(Invoke-WebRequest "https://api.inaturalist.org/v1/observations?&place_id=6753&taxon_id=$inaturalist&page=$num&per_page=200" | ConvertFrom-Json).results.location | Add-Content "./BDD/INATURALIST/$nom.csv" }		
-	}
+	}}
 	
 	#OBSERVATION.ORG
 	"Observation.org - $nom"
