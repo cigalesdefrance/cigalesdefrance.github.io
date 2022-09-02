@@ -14,7 +14,6 @@ jobs:
         if: always()
         run:  |
           ./SCRIPTS/BDD.ps1
-          ./SCRIPTS/KML.ps1
       
       - name: Sauvegarde des cartes de l'ONEM
         if: always()
