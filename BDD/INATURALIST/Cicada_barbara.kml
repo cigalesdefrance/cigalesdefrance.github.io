@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
 	<Document>
+	<Style id="inaturalist"><IconStyle><scale>0.5</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href></Icon></IconStyle></Style>
 	<name>Cicada_barbara</name>
 	<Folder>
 	<name>INATURALIST</name>
-	<Placemark><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href></Icon></IconStyle><Point><coordinates>2.1208710901,49.0061990648</coordinates></Point></Placemark>
+	<Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>2.1208710901,49.0061990648</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>
