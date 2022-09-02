@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+	<name>Tibicina_steveni</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>2.8322963789,43.5225134888</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>2.8616504744,43.5161098746</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>4.12242783,44.30245333</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>4.0047833333,44.0955778333</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>
