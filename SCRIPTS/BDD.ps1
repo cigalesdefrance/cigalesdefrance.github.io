@@ -61,7 +61,7 @@ foreach ($f in $files){
 	$fichier = $f.Name
     $espece = $f.Name -replace ".csv"
 	$kml =
-	"<?xml version=`"1.0`" encoding=`"UTF-8`"?><kml xmlns=`"http://www.opengis.net/kml/2.2"`">
+	"<?xml version=`"1.0`" encoding=`"UTF-8`"?><kml xmlns=`"http://www.opengis.net/kml/2.2`">
 	<Document>
 	<Style id="observation"><IconStyle><scale>0.5</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href></Icon></IconStyle></Style>
 	<name>$espece</name>
@@ -82,7 +82,7 @@ foreach ($f in $files){
 	$fichier = $f.Name
     $espece = $f.Name -replace ".csv"
 	$kml =
-	"<?xml version=`"1.0`" encoding=`"UTF-8`"?><kml xmlns=`"http://www.opengis.net/kml/2.2`" xmlns:gx=`"http://www.google.com/kml/ext/2.2`" xmlns:kml=`"http://www.opengis.net/kml/2.2`" xmlns:atom=`"http://www.w3.org/2005/Atom`">
+	"<?xml version=`"1.0`" encoding=`"UTF-8`"?><kml xmlns=`"http://www.opengis.net/kml/2.2`">
 	<Document>
 	<Style id="inaturalist"><IconStyle><scale>0.5</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href></Icon></IconStyle></Style>
 	<name>$espece</name>
