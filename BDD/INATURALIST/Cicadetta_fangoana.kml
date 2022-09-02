@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+	<Document>
+	<name>Cicadetta_fangoana</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>9.3807772547,41.6637289516</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>9.37517,41.656133</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>9.3410054741,42.6423206709</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>9.1592690349,41.3874408968</coordinates></Point></Placemark> <Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>9.3336854596,41.5646584193</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>
