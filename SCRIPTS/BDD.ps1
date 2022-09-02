@@ -66,7 +66,7 @@ foreach ($f in $files){
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
-	$(Import-Csv "./BDD/OBSERVATION/$fichier" | foreach {'<Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
+	$(Import-Csv "./BDD/OBSERVATION/$fichier" | foreach {'<Placemark><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-square-lv.png</href></Icon></IconStyle><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
 	</Folder>
 	</Document>
 	</kml>"
@@ -86,7 +86,7 @@ foreach ($f in $files){
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
-	$(Import-Csv "./BDD/INATURALIST/$fichier" | foreach {'<Placemark><IconStyle><color>red</color><Icon></Icon></IconStyle><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
+	$(Import-Csv "./BDD/INATURALIST/$fichier" | foreach {'<Placemark><IconStyle><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href></Icon></IconStyle><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
 	</Folder>
 	</Document>
 	</kml>"
