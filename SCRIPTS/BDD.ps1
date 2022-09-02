@@ -63,7 +63,7 @@ foreach ($f in $files){
 	$kml =
 	"<?xml version=`"1.0`" encoding=`"UTF-8`"?><kml xmlns=`"http://www.opengis.net/kml/2.2`">
 	<Document>
-	<Style id="observation"><IconStyle><scale>0.5</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href></Icon></IconStyle></Style>
+	<Style id=`"observation`"><IconStyle><scale>0.5</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href></Icon></IconStyle></Style>
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
@@ -84,7 +84,7 @@ foreach ($f in $files){
 	$kml =
 	"<?xml version=`"1.0`" encoding=`"UTF-8`"?><kml xmlns=`"http://www.opengis.net/kml/2.2`">
 	<Document>
-	<Style id="inaturalist"><IconStyle><scale>0.5</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href></Icon></IconStyle></Style>
+	<Style id=`"inaturalist`"><IconStyle><scale>0.5</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href></Icon></IconStyle></Style>
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
