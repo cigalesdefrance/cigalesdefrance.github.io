@@ -124,12 +124,12 @@ foreach ($f in $files){
 	</kml>"
 	
 	$kml | Out-File -Force -Encoding ascii ("./BDD/INATURALIST/$espece.kml")
-	
+}
 # GBIF
 $files = Get-ChildItem "./BDD/GBIF/" -Filter *.csv
 foreach ($f in $files){
 	$fichier = $f.Name
-    $espece = $f.Name -replace ".csv"
+	$espece = $f.Name -replace ".csv"
 	$kml =
 	"<?xml version=`"1.0`" encoding=`"UTF-8`"?><kml xmlns=`"http://www.opengis.net/kml/2.2`">
 	<Document>
