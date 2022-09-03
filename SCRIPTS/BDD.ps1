@@ -8,6 +8,7 @@ $cigales_codes | ForEach-Object {
 	$inpn = $_.INPN
 	$inaturalist = $_.INATURALIST
 	$observation = $_.OBSERVATION
+	$gbif = $_.GBIF
 	
 	#ONEM - voir https://github.com/cigalesdefrance/cigalesdefrance.github.io/blob/main/SCRIPTS/sauvegarde_onem.ps1
 	
