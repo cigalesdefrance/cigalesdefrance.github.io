@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="gbif"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/blu-circle-lv.png</href></Icon></IconStyle></Style>
+	<name>Cicadetta_cerdaniensis</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.45154,46.88891</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.45154,46.88891</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.45772,46.86052</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.45984,46.85826</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.2818,46.95346</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.25767,46.93873</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.27627,46.99295</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.25767,46.93873</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.27627,46.99295</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>1.99598,42.40569</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>1.99611,42.40556</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>1.98827,42.41541</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.35999,42.47312</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>1.99598,42.40556</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>

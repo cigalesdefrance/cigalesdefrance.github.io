@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="gbif"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/blu-circle-lv.png</href></Icon></IconStyle></Style>
+	<name>Graptopsaltria_nigrofuscata</name>
+	<Folder>
+	<name>INATURALIST</name>
+	
+	</Folder>
+	</Document>
+	</kml>

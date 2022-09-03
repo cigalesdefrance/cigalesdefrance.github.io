@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="gbif"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/blu-circle-lv.png</href></Icon></IconStyle></Style>
+	<name>Tibicina_tomentosa</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>3.176882,43.259073</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>3.22708,43.25816</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>6.607412,43.183031</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>6.62824,43.1833</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>3.16045,43.2753</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>6.65754,43.17471</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>3.02295,42.77148</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>3.0199,42.75778</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>3.03608,42.7713</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>
