@@ -41,7 +41,7 @@ window.onload = function go() {
 	
 	var layer_osm = new ol.layer.Tile({
 		source: new ol.source.OSM({attributions: [
-		'© <a href="https://www.cigalesdefrance.fr">Cigales de France</a>',ol.source.OSM.ATTRIBUTION	]}),
+		'© <a href="https://www.cigalesdefrance.fr">Cigales de France</a>',ol.source.OSM.ATTRIBUTION,'</br><a href="https://observation.org"><img class="copyright" src="https://observation.org/static/img/logo/logo-observation-org.svg"></img></a><a href="https://www.gbif.org"><img  class="copyright" src="https://docs.gbif.org/style/logo.svg"></img></a><a href="https://www.inaturalist.org/"><img class="copyright" src="https://static.inaturalist.org/sites/1-logo.svg"></img></a>']}),
 		opacity: 1
 	});
 	
@@ -53,13 +53,12 @@ window.onload = function go() {
 		opacity: 0.3
 	});
 	
-	var controls = ol.control.defaults({rotate: false}); 
+	// Bloquage de la rotation sur téléphone
 	var interactions = ol.interaction.defaults({altShiftDragRotate:false, pinchRotate:false});
 	
 	
-	// Declare the map with a tile layer, the empty vector layer and set it center
+	// CARTE
 	var map = new ol.Map({
-		controls: controls,
 		interactions: interactions,
 		target: 'map',
 		layers: [
@@ -83,19 +82,19 @@ window.onload = function go() {
 			{layer: layer_bdd1,
 				config: {
 					title: "Inaturalist",
-					description: "",
+					description: "Données provenant de Inaturalist, une base de données participative dont les identifications s'effectuent de manière communautaire à partir de photographies.",
 				}
 			},
 			{layer: layer_bdd2,
 				config: {
 					title: "Observation.org",
-					description: ""
+					description: "Données provenant de Observation.org, une base de données internationale."
 				}
 			},
 			{layer: layer_bdd3,
 				config: {
 					title: "GBIF",
-					description: ""
+					description: "Données provenant du Global Biodiversity Information Facility, qui a pour but de mettre à disposition toute l'information connue sur la biodiversité (données d'observations ou de collections sur les animaux, plantes, champignons, bactéries et archaea)."
 				}
 			},
 			{layer: regions,
@@ -127,7 +126,7 @@ window.onload = function go() {
 	
 	// Création du contrôle de détermination des coordonnées + altitude
 	var mpControl = new ol.control.GeoportalMousePosition({
-		apiKey: "calcul",
+		//apiKey: "calcul",
 		collapsed: true,
 		editCoordinates : true,
 		altitude : {
@@ -148,7 +147,7 @@ window.onload = function go() {
 	var choix = document.getElementById('choix');
 	
 	choix.onchange = function() {
-		title.innerHTML = this.options[this.selectedIndex].text;
+		//title.innerHTML = this.options[this.selectedIndex].text;
 		//sp.innerHTML = this.options[this.selectedIndex].getAttribute('espece');
 		var espece = this.options[this.selectedIndex].getAttribute('espece');
 		

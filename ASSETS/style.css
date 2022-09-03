@@ -8,19 +8,33 @@
     height: 100%;
 }
 
+.ol-attribution ul {
+	text-align: center;
+	padding: 2px;
+}
+
+.copyright {
+    padding: 2px;
+	width: 20%;
+	
+}
+
+h2 {
+	color: white;
+	text-shadow: 0 0 2px #000000;	
+}
+
+#choix {
+	width: 75%;
+}
+
 #details {
 	position:absolute;
 	width: 50%;
 	z-index:100;    
-    margin: 0 auto;
 	text-align: center;
-	background-color: rgba(0, 0, 0, 0.3);
-	padding: 5px;
-	border-radius: 25px;
-	border: 2px solid black;
-	transform: translate(+50%,0);
-	color: white;
-	text-shadow: 0 0 2px #000000;
+	top: .5em;
+	left: 25vw;
 }
 
 /* #map {
