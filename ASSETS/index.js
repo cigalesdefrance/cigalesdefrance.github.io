@@ -15,9 +15,8 @@ window.onload = function go() {
 	})
 	
 	var layer_bdd1 = new ol.layer.Vector();
-	
 	var layer_bdd2 = new ol.layer.Vector();
-	
+	var layer_bdd3 = new ol.layer.Vector();
 	
 	// Fonds de carte de base
 	var regions = new ol.layer.Vector({
@@ -68,6 +67,7 @@ window.onload = function go() {
 			layer_ortho,
 			regions,
 			departements,
+			layer_bdd3,
 			layer_bdd2,
 			layer_bdd1
 		],
@@ -92,7 +92,12 @@ window.onload = function go() {
 					description: ""
 				}
 			},
-			
+			{layer: layer_bdd3,
+				config: {
+					title: "GBIF",
+					description: ""
+				}
+			},
 			{layer: regions,
 				config: {
 					title: "Régions de France",
@@ -150,6 +155,7 @@ window.onload = function go() {
 		// Adresse du CSV
 		var url_bdd1 = './BDD/INATURALIST/' + espece + '.kml';
 		var url_bdd2 = './BDD/OBSERVATION/' + espece + '.kml';
+		var url_bdd3 = './BDD/GBIF/' + espece + '.kml';
 		
 		layer_bdd1.setSource(
 			new ol.source.Vector({
@@ -171,6 +177,15 @@ window.onload = function go() {
 			})
 		);
 		
+		layer_bdd3.setSource(
+			new ol.source.Vector({
+				format: new ol.format.KML({
+					extractStyles: true,
+					extractAttributes: true
+				}),
+				url: url_bdd3
+			})
+		);
 		
 	};
 	choix.onchange();
