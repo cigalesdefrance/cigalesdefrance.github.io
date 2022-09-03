@@ -79,10 +79,10 @@ $cigales_codes | ForEach-Object {
 					$long = Get-content "long.csv"
 					$(for($index=0;$index -lt $lat.Count;$index++){$lat[$index] + "," + $long[$index]}) | Add-Content "./BDD/GBIF/$nom.csv"
 					(Get-Content "./BDD/GBIF/$nom.csv") | ? {$_.trim() -ne "" } | Set-Content "./BDD/GBIF/$nom.csv"
-				}}
-				
-				Remove-item "lat.csv"
-				Remove-item "long.csv"	
+					
+					Remove-item "lat.csv"
+					Remove-item "long.csv"
+				}}				
 }
 
 ### CREATION DES KML
