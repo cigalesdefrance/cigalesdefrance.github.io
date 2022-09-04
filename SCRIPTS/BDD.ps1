@@ -1,4 +1,6 @@
 $cigales_codes = Import-Csv "CIGALES-CODES.csv"
+Remove-item "./BDD/INATURALIST/*.csv"
+Remove-Item "./BDD/GBIF/*.csv"
 $cigales_codes | ForEach-Object {
 	$nom = $_.NOM_SCIENTIFIQUE
 	$onem = $_.ONEM
@@ -21,7 +23,6 @@ $cigales_codes | ForEach-Object {
 	
 	#INATURALIST
 	"Inaturalist - $nom"
-	Remove-item "./BDD/INATURALIST/*.csv"
 	if ($inaturalist -eq "") {
 	"  > L'espèce n'existe pas dans Inaturalist" }
 	else {
@@ -68,7 +69,6 @@ $cigales_codes | ForEach-Object {
 			
 			#GBIF
 			"GBIF - $nom"
-			Remove-Item "./BDD/GBIF/*.csv"
 			if ($GBIF -eq "") {
 			"  > L'espèce n'existe pas dans GBIF" }
 			else {
@@ -82,7 +82,7 @@ $cigales_codes | ForEach-Object {
 					$pages = [math]::floor($count/300)
 					for ($num=0;$num -le $pages;$num++) {
 						if ($num -eq 0) {$offset=0} else {$offset = ($num*300)}
-						$offset
+						#$offset
 						"page $num sur $pages"
 						$lat = (Invoke-WebRequest "https://api.gbif.org/v1/occurrence/search?country=FR&taxon_key=$gbif&offset=$offset&limit=300" | ConvertFrom-Json).results.decimalLatitude | Add-Content "./BDD/GBIF/$nom-lat.csv" 
 						$long = (Invoke-WebRequest "https://api.gbif.org/v1/occurrence/search?country=FR&taxon_key=$gbif&offset=$offset&limit=300" | ConvertFrom-Json).results.decimalLongitude | Add-Content "./BDD/GBIF/$nom-long.csv" 
