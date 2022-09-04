@@ -4,7 +4,7 @@
 	<name>Cicadetta_montana</name>
 	<Folder>
 	<name>INATURALIST</name>
-	<Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>1.227954428,43.1097985111</coordinates></Point></Placemark> <Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>5.8499414722,49.5104208562</coordinates></Point></Placemark>
+	<Placemark><description>121253324</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>1.227954428,43.1097985111</coordinates></Point></Placemark> <Placemark><description>117099862</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>5.8499414722,49.5104208562</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>

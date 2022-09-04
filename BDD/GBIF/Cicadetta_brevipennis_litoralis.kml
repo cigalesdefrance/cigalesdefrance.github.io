@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="gbif"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/blu-circle-lv.png</href></Icon></IconStyle></Style>
+	<name>Cicadetta_brevipennis_litoralis</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><description>3847257381</description><styleUrl>#gbif</styleUrl><Point><coordinates>4.66195,43.54676</coordinates></Point></Placemark> <Placemark><description>3471724077</description><styleUrl>#gbif</styleUrl><Point><coordinates>3.0085,42.75386</coordinates></Point></Placemark> <Placemark><description>3471702122</description><styleUrl>#gbif</styleUrl><Point><coordinates>3.0085,42.75386</coordinates></Point></Placemark> <Placemark><description>3471716682</description><styleUrl>#gbif</styleUrl><Point><coordinates>3.0085,42.75386</coordinates></Point></Placemark> <Placemark><description>3471720203</description><styleUrl>#gbif</styleUrl><Point><coordinates>3.0085,42.75386</coordinates></Point></Placemark> <Placemark><description>3471724210</description><styleUrl>#gbif</styleUrl><Point><coordinates>3.0085,42.75386</coordinates></Point></Placemark> <Placemark><description>3471688501</description><styleUrl>#gbif</styleUrl><Point><coordinates>3.0085,42.75386</coordinates></Point></Placemark> <Placemark><description>3471705138</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.98155,42.64088</coordinates></Point></Placemark> <Placemark><description>3471710007</description><styleUrl>#gbif</styleUrl><Point><coordinates>3.0085,42.75386</coordinates></Point></Placemark> <Placemark><description>3471699331</description><styleUrl>#gbif</styleUrl><Point><coordinates>3.0085,42.75386</coordinates></Point></Placemark> <Placemark><description>3471721821</description><styleUrl>#gbif</styleUrl><Point><coordinates>3.0085,42.75386</coordinates></Point></Placemark> <Placemark><description>3861530465</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.52164,42.60003</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>

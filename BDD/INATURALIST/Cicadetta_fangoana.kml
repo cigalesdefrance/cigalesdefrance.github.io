@@ -4,7 +4,7 @@
 	<name>Cicadetta_fangoana</name>
 	<Folder>
 	<name>INATURALIST</name>
-	<Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.3807772547,41.6637289516</coordinates></Point></Placemark> <Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.37517,41.656133</coordinates></Point></Placemark> <Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.3410054741,42.6423206709</coordinates></Point></Placemark> <Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.1592690349,41.3874408968</coordinates></Point></Placemark> <Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.3336854596,41.5646584193</coordinates></Point></Placemark>
+	<Placemark><description>127237785</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.3807772547,41.6637289516</coordinates></Point></Placemark> <Placemark><description>124694947</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.37517,41.656133</coordinates></Point></Placemark> <Placemark><description>86305182</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.3410054741,42.6423206709</coordinates></Point></Placemark> <Placemark><description>82298170</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.1592690349,41.3874408968</coordinates></Point></Placemark> <Placemark><description>28600747</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.3336854596,41.5646584193</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>

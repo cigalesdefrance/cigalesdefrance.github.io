@@ -4,7 +4,7 @@
 	<name>Dimissalna_dimissa</name>
 	<Folder>
 	<name>INATURALIST</name>
-	<Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>4.524732,44.258097</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>6.00877,43.31168</coordinates></Point></Placemark>
+	<Placemark><description>3327949129</description><styleUrl>#gbif</styleUrl><Point><coordinates>4.524732,44.258097</coordinates></Point></Placemark> <Placemark><description>3489936906</description><styleUrl>#gbif</styleUrl><Point><coordinates>6.00877,43.31168</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>

@@ -4,7 +4,7 @@
 	<name>Tibicina_corsica_fairmairei</name>
 	<Folder>
 	<name>INATURALIST</name>
-	<Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.747769,43.008623</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.558133,43.245958</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.980262,43.091587</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.565573,42.975196</coordinates></Point></Placemark> <Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>2.953784,43.161667</coordinates></Point></Placemark>
+	<Placemark><description>3873862552</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.747769,43.008623</coordinates></Point></Placemark> <Placemark><description>3888720455</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.558133,43.245958</coordinates></Point></Placemark> <Placemark><description>3314473374</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.980262,43.091587</coordinates></Point></Placemark> <Placemark><description>3802757341</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.565573,42.975196</coordinates></Point></Placemark> <Placemark><description>3343905055</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.953784,43.161667</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>

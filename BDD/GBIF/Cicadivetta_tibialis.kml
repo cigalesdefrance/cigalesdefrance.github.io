@@ -4,7 +4,7 @@
 	<name>Cicadivetta_tibialis</name>
 	<Folder>
 	<name>INATURALIST</name>
-	<Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>7,4</coordinates></Point></Placemark>
+	<Placemark><description>3309590767</description><styleUrl>#gbif</styleUrl><Point><coordinates>7,4</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>
