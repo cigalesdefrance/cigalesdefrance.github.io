@@ -21,6 +21,7 @@ $cigales_codes | ForEach-Object {
 	
 	#INATURALIST
 	"Inaturalist - $nom"
+	Remove-item "./BDD/INATURALIST/*.csv"
 	if ($inaturalist -eq "") {
 	"  > L'espèce n'existe pas dans Inaturalist" }
 	else {
@@ -28,7 +29,6 @@ $cigales_codes | ForEach-Object {
 		if ($total_results -eq 0) {
 		"  > L'espèce est présente dans Inaturalist mais ne possède aucune donnée" }
 		else {
-			Remove-item "./BDD/INATURALIST/*.csv"
 			Add-Content "./BDD/INATURALIST/$nom-coord.csv" "Latitude,Longitude"
 			Add-Content "./BDD/INATURALIST/$nom-id.csv" "ID"
 			
@@ -68,6 +68,7 @@ $cigales_codes | ForEach-Object {
 			
 			#GBIF
 			"GBIF - $nom"
+			Remove-Item "./BDD/GBIF/*.csv"
 			if ($GBIF -eq "") {
 			"  > L'espèce n'existe pas dans GBIF" }
 			else {
@@ -76,7 +77,6 @@ $cigales_codes | ForEach-Object {
 				if ($count -eq 0) {
 				"  > L'espèce est présente dans GBIF mais ne possède aucune donnée" }
 				else {
-					Remove-Item "./BDD/GBIF/*.csv"
 					Add-Content "./BDD/GBIF/$nom-coord.csv" "Latitude,Longitude"
 					Add-Content "./BDD/GBIF/$nom-id.csv" "ID"
 					$pages = [math]::floor($count/300)
