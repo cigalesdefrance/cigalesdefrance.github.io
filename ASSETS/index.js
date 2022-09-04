@@ -76,6 +76,23 @@ window.onload = function go() {
 		})
 	});
 	
+	// CLICK SUR FEATURES
+	var selectClick = new ol.interaction.Select({
+        condition: ol.events.click
+	});
+	map.addInteraction(selectClick);
+	
+	
+	map.on('click', function(evt) {
+		var pixel = evt.pixel;
+		
+		var features = [];
+		map.forEachFeatureAtPixel(pixel, function(feature) {
+			features.push(feature);
+		});
+		observation.innerHTML = '<a href="' + features[0].get("description") + '" target="_blank">Visualiser l\'observation</a>';
+	});
+	
 	// Création du Layer Switcher
 	var lsControl = new ol.control.LayerSwitcher({
 		layers : [
@@ -135,7 +152,6 @@ window.onload = function go() {
 	});
 	map.addControl(mpControl);
 	
-	
 	// Recherche de lieu
 	var searchControl = new ol.control.SearchEngine({});
 	map.addControl(searchControl);
@@ -165,6 +181,21 @@ window.onload = function go() {
 				url: url_bdd1
 			})
 		);
+		
+		
+		// CLUSTER
+		/* layer_bdd1.setSource(
+			new ol.source.Cluster({
+			distance: 10,
+			source : new ol.source.Vector({
+			format: new ol.format.KML({
+			extractStyles: true,
+			extractAttributes: true
+			}),
+			url: url_bdd1
+			})
+			}));
+		*/
 		
 		layer_bdd2.setSource(
 			new ol.source.Vector({
