@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="inaturalist"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href></Icon></IconStyle></Style>
+	<name>Tibicina_corsica</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><description>https://www.inaturalist.org/observations/127819241</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>2.7477691809,43.0086230277</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/126796547</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>2.5581329226,43.2459575427</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/118423815</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>2.5655732717,42.9751956743</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/92546427</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>2.9537836835,43.1616666176</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/63695663</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>2.9802620318,43.0915869519</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>

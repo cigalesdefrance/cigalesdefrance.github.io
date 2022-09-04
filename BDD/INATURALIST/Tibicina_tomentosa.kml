@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="inaturalist"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href></Icon></IconStyle></Style>
+	<name>Tibicina_tomentosa</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><description>https://www.inaturalist.org/observations/68415133</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>6.6074118035,43.1830311089</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/49155699</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>3.1768816045,43.2590730748</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>

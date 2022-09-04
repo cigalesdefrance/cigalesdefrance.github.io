@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="gbif"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/blu-circle-lv.png</href></Icon></IconStyle></Style>
+	<name>Tibicina_corsica_fairmairei</name>
+	<Folder>
+	<name>GBIF</name>
+	<Placemark><description>https://www.gbif.org/occurrence/3873862552</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.747769,43.008623</coordinates></Point></Placemark> <Placemark><description>https://www.gbif.org/occurrence/3888720455</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.558133,43.245958</coordinates></Point></Placemark> <Placemark><description>https://www.gbif.org/occurrence/3314473374</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.980262,43.091587</coordinates></Point></Placemark> <Placemark><description>https://www.gbif.org/occurrence/3802757341</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.565573,42.975196</coordinates></Point></Placemark> <Placemark><description>https://www.gbif.org/occurrence/3343905055</description><styleUrl>#gbif</styleUrl><Point><coordinates>2.953784,43.161667</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>

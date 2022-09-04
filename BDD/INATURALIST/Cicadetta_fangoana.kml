@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="inaturalist"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href></Icon></IconStyle></Style>
+	<name>Cicadetta_fangoana</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><description>https://www.inaturalist.org/observations/127237785</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.3807772547,41.6637289516</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/124694947</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.37517,41.656133</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/86305182</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.3410054741,42.6423206709</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/82298170</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.1592690349,41.3874408968</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/28600747</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>9.3336854596,41.5646584193</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>

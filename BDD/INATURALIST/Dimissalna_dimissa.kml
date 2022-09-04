@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="inaturalist"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href></Icon></IconStyle></Style>
+	<name>Dimissalna_dimissa</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><description>https://www.inaturalist.org/observations/86682671</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>4.52473195,44.25809677</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>

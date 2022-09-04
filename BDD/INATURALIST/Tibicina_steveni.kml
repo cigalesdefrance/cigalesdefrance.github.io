@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="inaturalist"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href></Icon></IconStyle></Style>
+	<name>Tibicina_steveni</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><description>https://www.inaturalist.org/observations/125420645</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>2.8322963789,43.5225134888</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/125420611</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>2.8616504744,43.5161098746</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/52414153</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>4.12242783,44.30245333</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/36131926</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>4.0047833333,44.0955778333</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>

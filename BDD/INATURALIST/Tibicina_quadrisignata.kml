@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><kml xmlns="http://www.opengis.net/kml/2.2">
+	<Document>
+	<Style id="inaturalist"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/grn-circle-lv.png</href></Icon></IconStyle></Style>
+	<name>Tibicina_quadrisignata</name>
+	<Folder>
+	<name>INATURALIST</name>
+	<Placemark><description>https://www.inaturalist.org/observations/87696338</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>3.7123683097,44.0367348101</coordinates></Point></Placemark> <Placemark><description>https://www.inaturalist.org/observations/26908063</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>3.9544411842,44.4689219864</coordinates></Point></Placemark>
+	</Folder>
+	</Document>
+	</kml>
