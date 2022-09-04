@@ -1,6 +1,4 @@
 $cigales_codes = Import-Csv "CIGALES-CODES.csv"
-Remove-Item "./BDD/INATURALIST/*.csv"
-Remove-Item "./BDD/GBIF/*.csv"
 $cigales_codes | ForEach-Object {
 	$nom = $_.NOM_SCIENTIFIQUE
 	$onem = $_.ONEM
@@ -26,15 +24,28 @@ $cigales_codes | ForEach-Object {
 	if ($inaturalist -eq "") {
 	"  > L'espèce n'existe pas dans Inaturalist" }
 	else {
-		Add-Content "./BDD/INATURALIST/$nom.csv" "Latitude,Longitude"
 		$total_results = (Invoke-WebRequest "https://api.inaturalist.org/v1/observations?&place_id=6753&taxon_id=$inaturalist" | ConvertFrom-Json).total_results
 		if ($total_results -eq 0) {
 		"  > L'espèce est présente dans Inaturalist mais ne possède aucune donnée" }
 		else {
+			Remove-item "./BDD/INATURALIST/*.csv"
+			Add-Content "./BDD/INATURALIST/$nom-coord.csv" "Latitude,Longitude"
+			Add-Content "./BDD/INATURALIST/$nom-id.csv" "ID"
+			
 			$pages = [math]::ceiling($total_results/200)
 			for ($num=1;$num -le $pages;$num++) {
 				"page $num sur $pages"
-			(Invoke-WebRequest "https://api.inaturalist.org/v1/observations?&place_id=6753&taxon_id=$inaturalist&page=$num&per_page=200" | ConvertFrom-Json).results.location | Add-Content "./BDD/INATURALIST/$nom.csv" }		
+				(Invoke-WebRequest "https://api.inaturalist.org/v1/observations?&place_id=6753&taxon_id=$inaturalist&page=$num&per_page=200" | ConvertFrom-Json).results.location | Add-Content "./BDD/INATURALIST/$nom-coord.csv" 
+				(Invoke-WebRequest "https://api.inaturalist.org/v1/observations?&place_id=6753&taxon_id=$inaturalist&page=$num&per_page=200" | ConvertFrom-Json).results.id | Add-Content "./BDD/INATURALIST/$nom-id.csv" 
+			}		
+			
+			$coord = Get-content "./BDD/INATURALIST/$nom-coord.csv" 
+			$id = Get-content "./BDD/INATURALIST/$nom-id.csv"
+			$(for($index=0;$index -lt $coord.Count;$index++){$coord[$index] + "," + $id[$index]}) | Add-Content "./BDD/INATURALIST/$nom.csv"
+			(Get-Content "./BDD/INATURALIST/$nom.csv") | ? {$_.trim() -ne "" } | Set-Content "./BDD/INATURALIST/$nom.csv"
+			Remove-item "./BDD/INATURALIST/$nom-id.csv"
+			Remove-item "./BDD/INATURALIST/$nom-coord.csv"
+			
 		}}
 		
 		#OBSERVATION.ORG
@@ -57,31 +68,40 @@ $cigales_codes | ForEach-Object {
 			
 			#GBIF
 			"GBIF - $nom"
-			if ($inaturalist -eq "") {
+			if ($GBIF -eq "") {
 			"  > L'espèce n'existe pas dans GBIF" }
 			else {
-				Add-Content "./BDD/GBIF/$nom.csv" "Latitude,Longitude"
+				
 				$count = (Invoke-WebRequest "https://api.gbif.org/v1/occurrence/search?country=FR&taxon_key=$gbif" | ConvertFrom-Json).count
 				if ($count -eq 0) {
 				"  > L'espèce est présente dans GBIF mais ne possède aucune donnée" }
 				else {
+					Remove-Item "./BDD/GBIF/*.csv"
+					Add-Content "./BDD/GBIF/$nom-coord.csv" "Latitude,Longitude"
+					Add-Content "./BDD/GBIF/$nom-id.csv" "ID"
 					$pages = [math]::floor($count/300)
 					for ($num=0;$num -le $pages;$num++) {
 						if ($num -eq 0) {$offset=0} else {$offset = ($num*300)}
 						$offset
 						"page $num sur $pages"
-						$lat = (Invoke-WebRequest "https://api.gbif.org/v1/occurrence/search?country=FR&taxon_key=$gbif&offset=$offset&limit=300" | ConvertFrom-Json).results.decimalLatitude | Add-Content "lat.csv" 
-						$long = (Invoke-WebRequest "https://api.gbif.org/v1/occurrence/search?country=FR&taxon_key=$gbif&offset=$offset&limit=300" | ConvertFrom-Json).results.decimalLongitude | Add-Content "long.csv" 
-						
+						$lat = (Invoke-WebRequest "https://api.gbif.org/v1/occurrence/search?country=FR&taxon_key=$gbif&offset=$offset&limit=300" | ConvertFrom-Json).results.decimalLatitude | Add-Content "./BDD/GBIF/$nom-lat.csv" 
+						$long = (Invoke-WebRequest "https://api.gbif.org/v1/occurrence/search?country=FR&taxon_key=$gbif&offset=$offset&limit=300" | ConvertFrom-Json).results.decimalLongitude | Add-Content "./BDD/GBIF/$nom-long.csv" 
+						$id = (Invoke-WebRequest "https://api.gbif.org/v1/occurrence/search?country=FR&taxon_key=$gbif&offset=$offset&limit=300" | ConvertFrom-Json).results.key | Add-Content "./BDD/GBIF/$nom-id.csv" 
 					}
 					
-					$lat = Get-content "lat.csv"
-					$long = Get-content "long.csv"
-					$(for($index=0;$index -lt $lat.Count;$index++){$lat[$index] + "," + $long[$index]}) | Add-Content "./BDD/GBIF/$nom.csv"
-					(Get-Content "./BDD/GBIF/$nom.csv") | ? {$_.trim() -ne "" } | Set-Content "./BDD/GBIF/$nom.csv"
+					$lat = Get-content "./BDD/GBIF/$nom-lat.csv" 
+					$long = Get-content "./BDD/GBIF/$nom-long.csv" 
+					$(for($index=0;$index -lt $lat.Count;$index++){$lat[$index] + "," + $long[$index]}) | Add-Content "./BDD/GBIF/$nom-coord.csv"
+					(Get-Content "./BDD/GBIF/$nom-coord.csv") | ? {$_.trim() -ne "" } | Set-Content "./BDD/GBIF/$nom-coord.csv"
+					Remove-item "./BDD/GBIF/$nom-lat.csv" 
+					Remove-item "./BDD/GBIF/$nom-long.csv" 
 					
-					Remove-item "lat.csv"
-					Remove-item "long.csv"
+					$coord = Get-content "./BDD/GBIF/$nom-coord.csv" 
+					$id = Get-content "./BDD/GBIF/$nom-id.csv"
+					$(for($index=0;$index -lt $coord.Count;$index++){$coord[$index] + "," + $id[$index]}) | Add-Content "./BDD/GBIF/$nom.csv"
+					(Get-Content "./BDD/GBIF/$nom.csv") | ? {$_.trim() -ne "" } | Set-Content "./BDD/GBIF/$nom.csv"
+					Remove-item "./BDD/GBIF/$nom-id.csv"
+					Remove-item "./BDD/GBIF/$nom-coord.csv"
 				}}				
 }
 
@@ -98,7 +118,7 @@ foreach ($f in $files){
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
-	$(Import-Csv "./BDD/OBSERVATION/$fichier" | foreach {'<Placemark><styleUrl>#observation</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
+	$(Import-Csv "./BDD/OBSERVATION/$fichier" | foreach {'<Placemark><description></description><styleUrl>#observation</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude)
 	</Folder>
 	</Document>
 	</kml>"
@@ -119,7 +139,7 @@ foreach ($f in $files){
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
-	$(Import-Csv "./BDD/INATURALIST/$fichier" | foreach {'<Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
+	$(Import-Csv "./BDD/INATURALIST/$fichier" | foreach {'<Placemark><description>{2}</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude, $_.ID})
 	</Folder>
 	</Document>
 	</kml>"
@@ -138,7 +158,7 @@ foreach ($f in $files){
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
-	$(Import-Csv "./BDD/GBIF/$fichier" | foreach {'<Placemark><styleUrl>#gbif</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
+	$(Import-Csv "./BDD/GBIF/$fichier" | foreach {'<Placemark><description>{2}</description><styleUrl>#gbif</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude, $_.ID}})
 	</Folder>
 	</Document>
 	</kml>"
