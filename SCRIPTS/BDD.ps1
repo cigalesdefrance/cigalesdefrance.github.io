@@ -118,7 +118,7 @@ foreach ($f in $files){
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
-	$(Import-Csv "./BDD/OBSERVATION/$fichier" | foreach {'<Placemark><description></description><styleUrl>#observation</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
+	$(Import-Csv "./BDD/OBSERVATION/$fichier" | foreach {'<Placemark><description>https://france.observation.org/</description><styleUrl>#observation</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
 	</Folder>
 	</Document>
 	</kml>"
@@ -139,7 +139,7 @@ foreach ($f in $files){
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
-	$(Import-Csv "./BDD/INATURALIST/$fichier" | foreach {'<Placemark><description>{2}</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude, $_.ID})
+	$(Import-Csv "./BDD/INATURALIST/$fichier" | foreach {'<Placemark><description>https://www.inaturalist.org/observations/{2}</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude, $_.ID})
 	</Folder>
 	</Document>
 	</kml>"
@@ -158,7 +158,7 @@ foreach ($f in $files){
 	<name>$espece</name>
 	<Folder>
 	<name>INATURALIST</name>
-	$(Import-Csv "./BDD/GBIF/$fichier" | foreach {'<Placemark><description>{2}</description><styleUrl>#gbif</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude, $_.ID})
+	$(Import-Csv "./BDD/GBIF/$fichier" | foreach {'<Placemark><description>https://www.gbif.org/occurrence/{2}</description><styleUrl>#gbif</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude, $_.ID})
 	</Folder>
 	</Document>
 	</kml>"
