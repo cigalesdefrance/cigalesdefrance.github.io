@@ -4,7 +4,7 @@
 	<name>Tibicina_steveni</name>
 	<Folder>
 	<name>INATURALIST</name>
-	<Placemark><styleUrl>#observation</styleUrl><Point><coordinates>4.043,44.229</coordinates></Point></Placemark> <Placemark><styleUrl>#observation</styleUrl><Point><coordinates>4.018,44.255</coordinates></Point></Placemark> <Placemark><styleUrl>#observation</styleUrl><Point><coordinates>4.018,44.250</coordinates></Point></Placemark> <Placemark><styleUrl>#observation</styleUrl><Point><coordinates>4.036,44.228</coordinates></Point></Placemark>
+	<Placemark><description></description><styleUrl>#observation</styleUrl><Point><coordinates>4.043,44.229</coordinates></Point></Placemark> <Placemark><description></description><styleUrl>#observation</styleUrl><Point><coordinates>4.018,44.255</coordinates></Point></Placemark> <Placemark><description></description><styleUrl>#observation</styleUrl><Point><coordinates>4.018,44.250</coordinates></Point></Placemark> <Placemark><description></description><styleUrl>#observation</styleUrl><Point><coordinates>4.036,44.228</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>

@@ -4,7 +4,7 @@
 	<name>Tibicina_nigronervosa</name>
 	<Folder>
 	<name>INATURALIST</name>
-	<Placemark><styleUrl>#observation</styleUrl><Point><coordinates>9.466,42.905</coordinates></Point></Placemark> <Placemark><styleUrl>#observation</styleUrl><Point><coordinates>9.390,43.007</coordinates></Point></Placemark>
+	<Placemark><description></description><styleUrl>#observation</styleUrl><Point><coordinates>9.466,42.905</coordinates></Point></Placemark> <Placemark><description></description><styleUrl>#observation</styleUrl><Point><coordinates>9.390,43.007</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>

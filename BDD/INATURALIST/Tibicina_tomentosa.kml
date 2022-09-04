@@ -4,7 +4,7 @@
 	<name>Tibicina_tomentosa</name>
 	<Folder>
 	<name>INATURALIST</name>
-	<Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>6.6074118035,43.1830311089</coordinates></Point></Placemark> <Placemark><styleUrl>#inaturalist</styleUrl><Point><coordinates>3.1768816045,43.2590730748</coordinates></Point></Placemark>
+	<Placemark><description>68415133</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>6.6074118035,43.1830311089</coordinates></Point></Placemark> <Placemark><description>49155699</description><styleUrl>#inaturalist</styleUrl><Point><coordinates>3.1768816045,43.2590730748</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>

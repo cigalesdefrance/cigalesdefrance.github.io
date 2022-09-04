@@ -4,7 +4,7 @@
 	<name>Tibicina_quadrisignata</name>
 	<Folder>
 	<name>INATURALIST</name>
-	<Placemark><styleUrl>#observation</styleUrl><Point><coordinates>3.152,43.720</coordinates></Point></Placemark> <Placemark><styleUrl>#observation</styleUrl><Point><coordinates>6.109,43.447</coordinates></Point></Placemark> <Placemark><styleUrl>#observation</styleUrl><Point><coordinates>4.018,44.250</coordinates></Point></Placemark>
+	<Placemark><description></description><styleUrl>#observation</styleUrl><Point><coordinates>3.152,43.720</coordinates></Point></Placemark> <Placemark><description></description><styleUrl>#observation</styleUrl><Point><coordinates>6.109,43.447</coordinates></Point></Placemark> <Placemark><description></description><styleUrl>#observation</styleUrl><Point><coordinates>4.018,44.250</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>
