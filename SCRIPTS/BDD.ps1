@@ -117,7 +117,7 @@ foreach ($f in $files){
 	<Style id=`"observation`"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/red-circle-lv.png</href></Icon></IconStyle></Style>
 	<name>$espece</name>
 	<Folder>
-	<name>INATURALIST</name>
+	<name>OBSERVATION</name>
 	$(Import-Csv "./BDD/OBSERVATION/$fichier" | foreach {'<Placemark><description>https://france.observation.org/</description><styleUrl>#observation</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude})
 	</Folder>
 	</Document>
@@ -157,7 +157,7 @@ foreach ($f in $files){
 	<Style id=`"gbif`"><IconStyle><scale>0.3</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/blu-circle-lv.png</href></Icon></IconStyle></Style>
 	<name>$espece</name>
 	<Folder>
-	<name>INATURALIST</name>
+	<name>GBIF</name>
 	$(Import-Csv "./BDD/GBIF/$fichier" | foreach {'<Placemark><description>https://www.gbif.org/occurrence/{2}</description><styleUrl>#gbif</styleUrl><Point><coordinates>{1},{0}</coordinates></Point></Placemark>' -f $_.Latitude, $_.Longitude, $_.ID})
 	</Folder>
 	</Document>
