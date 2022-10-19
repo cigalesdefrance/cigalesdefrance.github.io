@@ -90,7 +90,7 @@ window.onload = function go() {
 		map.forEachFeatureAtPixel(pixel, function(feature) {
 			features.push(feature);
 		});
-		observation.innerHTML = '<a href="' + features[0].get("description") + '" target="_blank">Visualiser l\'observation</a>';
+		observation.innerHTML = '<button><a href="' + features[0].get("description") + '" target="_blank">🡲 Visualiser l\'observation</a></button>';
 	});
 	
 	// Création du Layer Switcher
