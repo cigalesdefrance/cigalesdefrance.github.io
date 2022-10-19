@@ -37,12 +37,15 @@ h2 {
 	left: 25vw;
 }
 
-#observation, a {
-    margin: 5px;
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    }
+#observation {
+	margin: 5px;
+}
+
+#observation a {
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
 
 /* #map {
     width: 50%;
