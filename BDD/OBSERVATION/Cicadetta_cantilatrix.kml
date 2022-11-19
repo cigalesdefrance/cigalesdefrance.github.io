@@ -4,7 +4,7 @@
 	<name>Cicadetta_cantilatrix</name>
 	<Folder>
 	<name>OBSERVATION</name>
-	<Placemark><description>https://france.observation.org/</description><styleUrl>#observation</styleUrl><Point><coordinates>6.026,49.017</coordinates></Point></Placemark> <Placemark><description>https://france.observation.org/</description><styleUrl>#observation</styleUrl><Point><coordinates>6.390,49.463</coordinates></Point></Placemark>
+	<Placemark><description>https://france.observation.org/</description><styleUrl>#observation</styleUrl><Point><coordinates>6.026,49.017</coordinates></Point></Placemark> <Placemark><description>https://france.observation.org/</description><styleUrl>#observation</styleUrl><Point><coordinates>4.722,46.311</coordinates></Point></Placemark> <Placemark><description>https://france.observation.org/</description><styleUrl>#observation</styleUrl><Point><coordinates>4.716,46.315</coordinates></Point></Placemark> <Placemark><description>https://france.observation.org/</description><styleUrl>#observation</styleUrl><Point><coordinates>4.716,46.315</coordinates></Point></Placemark> <Placemark><description>https://france.observation.org/</description><styleUrl>#observation</styleUrl><Point><coordinates>4.718,46.299</coordinates></Point></Placemark> <Placemark><description>https://france.observation.org/</description><styleUrl>#observation</styleUrl><Point><coordinates>6.390,49.463</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>
