@@ -4,7 +4,7 @@
 	<name>Dimissalna_dimissa</name>
 	<Folder>
 	<name>GBIF</name>
-	<Placemark><description>https://www.gbif.org/occurrence/3327949129</description><styleUrl>#gbif</styleUrl><Point><coordinates>4.524732,44.258097</coordinates></Point></Placemark> <Placemark><description>https://www.gbif.org/occurrence/3489936906</description><styleUrl>#gbif</styleUrl><Point><coordinates>6.00877,43.31168</coordinates></Point></Placemark> <Placemark><description>https://www.gbif.org/occurrence/3939546151</description><styleUrl>#gbif</styleUrl><Point><coordinates>4.25364,44.19741</coordinates></Point></Placemark>
+	<Placemark><description>https://www.gbif.org/occurrence/3327949129</description><styleUrl>#gbif</styleUrl><Point><coordinates>4.524732,44.258097</coordinates></Point></Placemark> <Placemark><description>https://www.gbif.org/occurrence/3489936906</description><styleUrl>#gbif</styleUrl><Point><coordinates>6.00877,43.31168</coordinates></Point></Placemark> <Placemark><description>https://www.gbif.org/occurrence/3939546151</description><styleUrl>#gbif</styleUrl><Point><coordinates>4.2315,44.19172</coordinates></Point></Placemark>
 	</Folder>
 	</Document>
 	</kml>
